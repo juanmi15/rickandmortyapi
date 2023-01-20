@@ -6,9 +6,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--TailwindCSS-->
     <link rel="stylesheet" href="dist/output.css">
-    <title>Document</title>
+    <title>Rick&Morty API</title>
 </head>
 <body>
-    <h1 class="bg-blue-600">Hola</h1>
+
+    <main>
+        <!-- Spinner cargando -->
+        <section class="flex h-screen w-screen items-center justify-center"">
+            <button type="button" class="flex items-center rounded-full bg-sky-600 px-5 py-5 text-white" disabled>
+              <svg class="mr-3 h-5 w-5 animate-spin text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+              </svg>
+              <span class="font-semibold"> Loading... </span>
+            </button>
+        </section>
+        <!-- Cards -->
+        <article class="flex mx-auto">
+            <div class="card text-center shadow-md m-2 bg-gray-200 w-auto">
+                <img src="" alt="" class="card-img">
+                <div class="card-body">
+                    <h5 class="card-title text-sky-500 font-semibold text-2xl"></h5>
+                    <p class="text-gray-500 mb-2"></p>
+                </div>  
+            </div>
+        
+        </article>
+        
+    </main>
+
+    <script src="scripts.js"></script>
 </body>
 </html>
+

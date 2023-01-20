@@ -8,33 +8,42 @@
     <link rel="stylesheet" href="dist/output.css">
     <title>Rick&Morty API</title>
 </head>
-<body>
+<body class="bg-purple-200">
 
     <main>
         <!-- Spinner cargando -->
-        <section class="flex h-screen w-screen items-center justify-center"">
-            <button type="button" class="flex items-center rounded-full bg-sky-600 px-5 py-5 text-white" disabled>
+        <section class="flex  h-screen w-screen items-center justify-center hidden" id="loading">
+            <button type="button" class="flex items-center rounded-full bg-purple-600 px-5 py-5 text-white" disabled>
               <svg class="mr-3 h-5 w-5 animate-spin text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
                 <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
                 <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
               </svg>
               <span class="font-semibold"> Loading... </span>
             </button>
-        </section>
-        <!-- Cards -->
-        <article class="flex mx-auto">
-            <div class="card text-center shadow-md m-2 bg-gray-200 w-auto">
-                <img src="" alt="" class="card-img">
-                <div class="card-body">
-                    <h5 class="card-title text-sky-500 font-semibold text-2xl"></h5>
-                    <p class="text-gray-500 mb-2"></p>
-                </div>  
-            </div>
-        
-        </article>
-        
-    </main>
+        </section>    
 
+        <section id="cards-dinamicas" class=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 max-w-4xl mx-auto">
+
+        </section>
+        </main>
+    
+    
+          
+        <template id="card-template">
+            <article class="flex mx-auto">
+                <div class="card text-center shadow-md m-2 bg-purple-600 w-auto">
+                    <img src="" alt="" class="card-img">
+                    <div class="card-body">
+                        <h5 class="card-title text-white font-semibold text-2xl"></h5>
+                        <p class="p1  text-lg font-semibold"></p>
+                        <p class="p2 text-white mb-2"></p>
+
+                    </div>  
+                </div>
+            
+            </article>
+            
+        </template>
     <script src="scripts.js"></script>
 </body>
 </html>
